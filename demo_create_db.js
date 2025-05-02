@@ -1,15 +1,17 @@
-var mysql = require("mysql");
+require("dotenv").config();
+const mysql = require("mysql");
 
-var con = mysql.createConnection({
-  host: "localhost",
-  user: "yourusername",
-  password: "yourpassword",
+const connection = mysql.createConnection({
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
 });
 
-con.connect(function (err) {
+connection.connect(function (err) {
   if (err) throw err;
-  console.log("Connected!");
-  con.query("CREATE DATABASE mydb", function (err, result) {
+  console.log("Connected to MySQL!");
+
+  connection.query("CREATE DATABASE mydb", function (err, result) {
     if (err) throw err;
     console.log("Database created");
   });
