@@ -15,6 +15,6 @@ connection.connect(function (err) {
   connection.query(sql, function (err, result, fields) {
     if (err) throw err;
     console.log(result);
-    console.log(fields);
+    //To see detailes about table console.log(fields);
   });
 });
