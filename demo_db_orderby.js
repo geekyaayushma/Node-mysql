@@ -1,7 +1,7 @@
 require("dotenv").config();
-const mysql = require("mysql");
+var mysql = require("mysql");
 
-const connection = mysql.createConnection.connection({
+var connection = mysql.createConnection({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
@@ -11,7 +11,7 @@ const connection = mysql.createConnection.connection({
 connection.connect(function (err) {
   if (err) throw err;
   console.log("Connected");
-  const sql = "SELECT * FROM CUSTOMERS ORDER BY name";
+  var sql = "SELECT * FROM CUSTOMERS ORDER BY name";
   connection.query(sql, function (err, result) {
     if (err) throw err;
     console.log(result);
