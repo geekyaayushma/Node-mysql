@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semantic Layout</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: grid;
+        grid-template-areas:
+          "header header"
+          "nav nav"
+          "section aside"
+          "article aside"
+          "footer footer";
+        grid-template-columns: 2fr 1fr;
+        gap: 10px;
+        padding: 20px;
+      }
+
+      header {
+        grid-area: header;
+        background-color: #f8b400;
+        padding: 10px;
+        text-align: center;
+      }
+
+      nav {
+        grid-area: nav;
+        background-color: #fdd835;
+        padding: 10px;
+      }
+
+      section {
+        grid-area: section;
+        background-color: #e0e0e0;
+        padding: 10px;
+      }
+
+      article {
+        grid-area: article;
+        background-color: #c8e6c9;
+        padding: 10px;
+      }
+
+      aside {
+        grid-area: aside;
+        background-color: #ffe082;
+        padding: 10px;
+      }
+
+      footer {
+        grid-area: footer;
+        background-color: #90a4ae;
+        padding: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Website Header</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section>
+      <h2>Main Section</h2>
+      <p>This is the section content.</p>
+    </section>
+
+    <article>
+      <h2>Article Title</h2>
+      <p>This is an article inside the layout.</p>
+    </article>
+
+    <aside>
+      <h3>Sidebar</h3>
+      <p>This is some additional info in the aside.</p>
+    </aside>
+
+    <footer>
+      <p>Footer Content &copy; 2025</p>
+    </footer>
+  </body>
+</html>
