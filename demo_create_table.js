@@ -11,8 +11,7 @@ const connection = mysql.createConnection({
 connection.connect(function (err) {
   if (err) throw err;
   console.log("Connected!");
-  const sql =
-    "CREATE TABLE customers (name VARCHAR(255), address VARCHAR(255))";
+  const sql = "CREATE TABLE Students (name VARCHAR(255), address VARCHAR(255))";
   connection.query(sql, function (err, result) {
     if (err) throw err;
     console.log("Table created");

@@ -10,11 +10,12 @@ var connection = mysql.createConnection({
 
 connection.connect(function (err) {
   if (err) throw err;
-  console.log("Connected!");
-  var sql =
-    "INSERT INTO Students (name,address) VALUES ('Aayushma' , 'Sarlahi'),('Aakriti' , 'Portugal')";
-  connection.query(sql, function (err, result) {
+  console.log("Connected");
+
+  var sql = "UPDATE Students SET address = 'Palpa' WHERE address = 'Portugal'";
+
+  connection.query(sql, function (err, result, fields) {
     if (err) throw err;
-    console.log("Inserted into table");
+    console.log("Updated rows: " + result.affectedRows);
   });
 });

@@ -11,7 +11,7 @@ var connection = mysql.createConnection({
 connection.connect(function (err) {
   if (err) throw err;
   console.log("Connected");
-  var sql = "DROP TABLE customers";
+  var sql = "DROP TABLE Students";
   //Delete the whole table
   connection.query(sql, function (err) {
     if (err) throw err;

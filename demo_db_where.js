@@ -11,7 +11,7 @@ const connection = mysql.createConnection({
 connection.connect(function (err) {
   if (err) throw err;
   console.log("Connected");
-  var sql = "SELECT * FROM customers WHERE address = 'Sarlahi'";
+  var sql = "SELECT * FROM Students WHERE address = 'Sarlahi'";
   connection.query(sql, function (err, result) {
     if (err) throw err;
     console.log(result);

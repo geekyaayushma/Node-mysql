@@ -11,7 +11,7 @@ var connection = mysql.createConnection({
 connection.connect(function (err) {
   if (err) throw err;
   console.log("Connected!");
-  var sql = "DELETE FROM customers WHERE address = 'sarlahi'";
+  var sql = "DELETE FROM Students WHERE address = 'sarlahi'";
   connection.query(sql, function (err, result) {
     if (err) throw err;
     console.log("Number of records deleted: " + result.affectedRows);
